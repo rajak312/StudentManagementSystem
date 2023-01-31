@@ -32,7 +32,7 @@ div {
 
 
 			<form:form modelAttribute="studentDetails"
-				onsubmit="validation(this)" style="border: 2px solid gray; padding:30px; border-radius:15px; box-shadow:4px 7px 5px gray;margin:50px;">
+				onsubmit="return validation(this)" style="border: 2px solid gray; padding:30px; border-radius:15px; box-shadow:4px 7px 5px gray;margin:50px;">
 
 				<h1 style="text-align:center">Registration Form</h1>
 				<table>
@@ -87,7 +87,7 @@ div {
 							<div>
 								<form:input path="studentSemDetails[0].scienceMarks"
 									type="number" />
-								<span id="scienceSem1NoErr"></span>
+								<span id="scienceSem1Err"></span>
 							</div>
 						</td>
 					</tr>
