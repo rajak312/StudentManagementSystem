@@ -24,7 +24,7 @@ public class StudentServiceMgmtImpl implements IStudentDetailsService {
 
 	@Override
 	public String regisgerStudentDetails(StudentDetails student) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method student
 
 		return "Student " + studentRepo.save(student).getRollNo() + " Registered Successfully";
 	}

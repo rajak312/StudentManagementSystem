@@ -13,19 +13,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import com.nt.custom.StudentPageableMap;
 import com.nt.model.StudentDetails;
 import com.nt.service.IStudentDetailsService;
-import com.nt.validations.StudentValidator;
 
 @Controller
 public class StudentController {
 
 	@Autowired
 	private IStudentDetailsService studentService;
-	@Autowired
-	private StudentValidator studentValidator;
 
 	@GetMapping("/")
 	public String showRegistrationForm() {
@@ -35,16 +30,9 @@ public class StudentController {
 	@PostMapping("/register")
 	public String registerStudentDetails(RedirectAttributes attr,
 			@ModelAttribute("studentDetails") StudentDetails studentDetails, BindingResult errors) {
-
-		if (errors.hasFieldErrors())
-			return "student_add";
-
-		// checking form validation errors
-		if (studentValidator.supports(studentDetails.getClass())) {
-			studentValidator.validate(studentDetails, errors); // T
-			if (errors.hasErrors())
-				return "student_add";
-
+		if (studentDetails.getRollNo() == "" || studentDetails.equals(null)) {
+			attr.addFlashAttribute("msg", "Please Enter the Roll No");
+			return "redirect:register";
 		}
 		String result = studentService.regisgerStudentDetails(studentDetails);
 		attr.addFlashAttribute("msg", result);

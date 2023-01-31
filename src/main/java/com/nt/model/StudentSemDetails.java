@@ -10,8 +10,6 @@ import jakarta.persistence.Table;
 @Table
 public class StudentSemDetails {
 	
-	//@ManyToOne
-	//@JoinColumn(name = "rollNo", referencedColumnName = "rollNo")
 	@Id
 	@GeneratedValue
 	private Integer sNo;

@@ -1,14 +1,9 @@
-function hello(){
-	alert('how are you dear')
-}
 function validation(frm) {
-alert('form is executing')
-	console.log('validating the page')
-	//document.getElementById("demo");
-
+	alert('form is not validating')
 	const rollNoErr = document.getElementById("rollNoErr");
+	alert('1');
 	const nameErr = document.getElementById("nameErr");
-
+	alert("2 ");
 	const englishSem1Err = document.getElementById("englishSem1Err");
 	const englishSem2Err = document.getElementById("englishSem2Err");
 
@@ -18,7 +13,7 @@ alert('form is executing')
 	const scienceSem1Err = document.getElementById("scienceSem1Err");
 	const scienceSem2Err = document.getElementById("scienceSem1Err");
 
-
+	console.log('value is fine')
 
 
 

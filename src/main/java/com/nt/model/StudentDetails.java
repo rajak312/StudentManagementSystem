@@ -16,7 +16,6 @@ public class StudentDetails {
 	@Id
 	private String rollNo;
 	private String name;
-	//@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "studentDetails")
 	@OneToMany(targetEntity = StudentSemDetails.class,cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 	@JoinColumn(name = "STUDENTDETAILS_ID",referencedColumnName = "rollNo")
 	private List<StudentSemDetails> studentSemDetails;

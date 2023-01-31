@@ -22,7 +22,7 @@ a {
 		<c:if test="${!empty msg }">
 			<h3 class="text-center text-succeess">${msg }</h3>
 		</c:if>
-<h3>Top 2 Student Result</h3>
+		<h3>Top 2 Student Result</h3>
 		<table class="table table-hover table-striped">
 			<tr class="table text-white bg-secondary">
 				<th>RollNo</th>
@@ -36,7 +36,8 @@ a {
 
 
 			</tr>
-			<c:forEach var="studentList" items="${top2StuentList }" begin="0" end="1">
+			<c:forEach var="studentList" items="${top2StuentList }" begin="0"
+				end="1">
 				<tr>
 					<td>${studentList.rollNo}</td>
 					<td>${studentList.name }</td>
@@ -73,7 +74,7 @@ a {
 
 		<c:choose>
 			<c:when test="${!empty studentList.getContent()}">
-			<h3>All Student Result</h3>
+				<h3>All Student Result</h3>
 				<table class="table table-hover table-striped">
 					<tr class="table text-white bg-secondary">
 						<th>RollNo</th>
