@@ -86,8 +86,6 @@ public class StudentServiceMgmtImpl implements IStudentDetailsService {
 			});
 		});
 		count1 = 0;
-		top2RollNo.forEach(System.out::println);
-		top2Student.forEach(System.out::println);
 		StudentPageableMap studentObjectList = new StudentPageableMap(studentRepo.findAll(pageable), top2Student);
 		return studentObjectList;
 	}

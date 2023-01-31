@@ -32,7 +32,7 @@ div {
 
 
 			<form:form modelAttribute="studentDetails"
-				onsubmit="return validation(this)" style="border: 2px solid gray; padding:30px; border-radius:15px; box-shadow:4px 7px 5px gray;">
+				onsubmit="validation(this)" style="border: 2px solid gray; padding:30px; border-radius:15px; box-shadow:4px 7px 5px gray;margin:50px;">
 
 				<h1 style="text-align:center">Registration Form</h1>
 				<table>
@@ -128,7 +128,7 @@ div {
 
 					<tr>
 						<td colspan="2">
-							<button type="submit" style="width:100%; color:white; background-color: blue;padding:6px; border-radius: 8px;">Submit</button>
+							<button type="submit" style="width:100%; color:white; background-color: blue;padding:6px; border-radius: 8px;border:0px">Submit</button>
 						</td>
 					</tr>
 

@@ -20,7 +20,7 @@ a {
 	<div class="p-4 m-4">
 
 		<c:if test="${!empty msg }">
-			<h3 class="text-center text-succeess">${msg }</h3>
+			<h3 class="text-center text-success">${msg }</h3>
 		</c:if>
 		<h3>Top 2 Student Result</h3>
 		<table class="table table-hover table-striped">

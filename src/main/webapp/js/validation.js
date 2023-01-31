@@ -1,5 +1,5 @@
 function validation(frm) {
-	alert('form is not validating')
+	alert('form is not validating');
 	const rollNoErr = document.getElementById("rollNoErr");
 	alert('1');
 	const nameErr = document.getElementById("nameErr");
@@ -13,7 +13,7 @@ function validation(frm) {
 	const scienceSem1Err = document.getElementById("scienceSem1Err");
 	const scienceSem2Err = document.getElementById("scienceSem1Err");
 
-	console.log('value is fine')
+	console.log('value is fine');
 
 
 
